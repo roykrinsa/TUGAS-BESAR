@@ -22,7 +22,7 @@ double banwidth;
 int jumlahcctv;
 int kondisicctv;
 int posisicctv;
-
+fasilitasruangan(){}
 void Setjumlahkursi(int jk){
     this.jumlahkursi=jk;
 }
