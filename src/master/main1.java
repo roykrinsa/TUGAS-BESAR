@@ -18,6 +18,10 @@ public class main1 {
         fasilitas.analisisfasilitasruangan();
         kondisi.analisakondisiruang();
         identitas.analisisidentitasruangan();
+        interfacefasilitas fasilitasruangan = new analisisfasilitasruangan();
+       fasilitasruangan.data();
+       
+       
     }
     
 }

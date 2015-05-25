@@ -4,7 +4,7 @@ package master;
 import java.util.Scanner;
 
 
-public class inputfasilitasruangan {
+public class inputfasilitasruangan implements interfacefasilitas {
 
     Scanner in = new Scanner(System.in);
     public fasilitasruangan o= new fasilitasruangan();
@@ -57,6 +57,12 @@ public class inputfasilitasruangan {
        
 }
 
+    @Override
+    public void data() {
+        data();
+    }
+
+    
 }
 
     
