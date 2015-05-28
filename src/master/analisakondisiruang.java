@@ -1,15 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package master;
 
-/**
- *
- * @author Soveatin
- */
-public class analisakondisiruang extends inputkondisiruang {
+
+public class analisakondisiruang extends inputkondisiruang implements interfaceKondisi {
     public analisakondisiruang(){
         analisabentukruang();
         analisakebersihan();
@@ -115,6 +108,7 @@ public class analisakondisiruang extends inputkondisiruang {
             System.out.println("Belum Sesuai");
         }
     }
+    @Override
     void kokoh(){
         if(obj.getKekokohan()>=75){
             System.out.println("Kokoh dan Sudah Sesuai");
@@ -122,6 +116,11 @@ public class analisakondisiruang extends inputkondisiruang {
         else{
             System.out.println("Rapuh dan Belum Sesuai");
         }
+    }
+
+    @Override
+    public void intfkondRuang() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
