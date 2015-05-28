@@ -10,23 +10,28 @@ package master;
  * @author Soveatin
  */
 public class KondisiRuang {
-    int panjang;
-   int lebar;
-   int kondisiLantai;
-   int kondisiDinding;
-   int kondisiAtap;
-   int kondisiPintu;
-   int kondisiJendela;
-   int sirkulasiUdara;
-   int nilaiPencahayaan;
-   int kelembaban;
-   int suhu;
-   int kebisingan;
-   int bau;
-   int kebocoran;
-   int kerusakan;
-   int keausan;
-   int kekokohan;
+   private int panjang;
+   private int lebar;
+   private int kondisiLantai;
+   private int kondisiDinding;
+   private int kondisiAtap;
+   private int kondisiPintu;
+   private int kondisiJendela;
+   private int sirkulasiUdara;
+   private int nilaiPencahayaan;
+   private int kelembaban;
+   private int suhu;
+   private int kebisingan;
+   private int bau;
+   private int kebocoran;
+   private int kerusakan;
+   private int keausan;
+   private int kekokohan;
+ 
+   
+    KondisiRuang(){
+       
+   }
 
     public int getPanjang() {
         return panjang;
@@ -162,6 +167,34 @@ public class KondisiRuang {
 
     public void setKekokohan(int kokoh) {
         this.kekokohan = kokoh;
+    }
+    public void setKondisi( int kondisiLantai,  int kondisiDinding,  int kondisiAtap,  int kondisiPintu,  int kondisiJendela){
+        this.kondisiLantai=kondisiLantai;
+        this.kondisiDinding=kondisiDinding;
+        this.kondisiJendela=kondisiJendela;
+        this.kondisiAtap=kondisiAtap;
+        this.kondisiPintu=kondisiPintu;
+        
+    }
+    public void setKeadaan(int kebocoran,int kerusakan,int keausan,int kekokohan, int bau, int kebisingan){
+        this.kebocoran=kebocoran;
+        this.kerusakan=kerusakan;
+        this.keausan=keausan;
+        this.kekokohan=kekokohan;
+        this.bau=bau;
+        this.kebisingan=kebisingan;
+    }
+    public void setUdara(int sirkulasiUdara,int nilaiPencahayaan,int kelembaban,int suhu){
+        this.sirkulasiUdara=sirkulasiUdara;
+        this.nilaiPencahayaan=nilaiPencahayaan;
+        this.kelembaban=kelembaban;
+        this.suhu=suhu;
+             
+    }
+    public void luas(int panjang, int lebar){
+        this.panjang=panjang;
+        this.lebar=lebar;
+        
     }
 
 
