@@ -10,12 +10,14 @@ package master;
  * @author Soveatin
  */
 public class analisisidentitasruangan extends Input {
-    public analisisidentitasruangan(){
+public void analisisidentitasruangan(){
        System.out.println("pintujendelabahaya");
 
   insertdatakuncipintujendelabahaya();
   cetakdatakuncipintujendelabahaya();
-   
+   analisiskuncipintu();
+bahaya();
+jendela();
    }
        
 void analisiskuncipintu(){

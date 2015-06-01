@@ -3,14 +3,33 @@ package master;
 
 import java.util.*;
 
-public class analisisfasilitasruangan extends inputfasilitasruangan {
-    public analisisfasilitasruangan(){
+public class analisisfasilitasruangan extends inputfasilitasruangan implements interfacefasilitas {
+   public void data(){
+    System.out.println("petunjuk.");
+    System.out.println("angka 1=baik");
+    System.out.println("angka 2=tidak baik");
+}
+    public void analisisfasilitasruangan(){
+     masukkan();
+     Analisiskelistrikan();
         
+    
+    Analisislcd();
+    Analisislampu();
+    Analisiskipasangin();
+    Analisisac();
+    Analisisinternet();
+    Analisiscctv();
+    pintu();
+    jendela();
     }
 
     @Override
-    public void masukkan() {
-        super.masukkan(); //To change body of generated methods, choose Tools | Templates.
+    public void input() {
+        System.out.println("==================================================");
+        masukkan(); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("==================================================");
+        
     }
     
     
@@ -184,6 +203,7 @@ public class analisisfasilitasruangan extends inputfasilitasruangan {
         }
     
     }
+}
 
    
 
@@ -196,4 +216,3 @@ public class analisisfasilitasruangan extends inputfasilitasruangan {
 
 
 
-}

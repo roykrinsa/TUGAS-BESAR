@@ -4,7 +4,7 @@ package master;
 import java.util.Scanner;
 
 
-public class inputfasilitasruangan {
+public abstract class inputfasilitasruangan   {
 
     Scanner in = new Scanner(System.in);
     public fasilitasruangan o= new fasilitasruangan();
@@ -56,7 +56,10 @@ public class inputfasilitasruangan {
         o.setJumlahjendela(in.nextInt());
        
 }
+public abstract void input();
 
+
+    
 }
 
     
