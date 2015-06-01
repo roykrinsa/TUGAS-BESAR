@@ -23,6 +23,7 @@ public class play {
         mainkan.bocor();
         mainkan.aus();
         mainkan.kokoh();
+        
         }
         
     }

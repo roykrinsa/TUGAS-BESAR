@@ -1,19 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package master;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Soveatin
- */
-public class inputkondisiruang {
+public class inputkondisiruang extends KondisiRuang {
     KondisiRuang obj = new KondisiRuang();
     Scanner in = new Scanner(System.in);
+
+    @Override
+    public void setKondisi(int kondisiLantai, int kondisiDinding, int kondisiAtap, int kondisiPintu, int kondisiJendela) {
+        super.setKondisi(kondisiLantai, kondisiDinding, kondisiAtap, kondisiPintu, kondisiJendela); //To change body of generated methods, choose Tools | Templates.
+    }
+    
      void analisabentukruang(){
          
          System.out.println("Masukkan panjang = ");
