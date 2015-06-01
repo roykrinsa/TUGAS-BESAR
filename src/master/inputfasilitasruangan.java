@@ -1,10 +1,11 @@
 
 package master;
 
+import java.io.FileWriter;
 import java.util.Scanner;
 
 
-public abstract class inputfasilitasruangan   {
+public abstract class inputfasilitasruangan extends fasilitasruangan  {
 
     Scanner in = new Scanner(System.in);
     public fasilitasruangan o= new fasilitasruangan();
@@ -56,11 +57,36 @@ public abstract class inputfasilitasruangan   {
         o.setJumlahjendela(in.nextInt());
        
 }
-public abstract void input();
-
-
-    
+public void save(){
+		try{
+		FileWriter tulis = new FileWriter("inputfasilitasruangan.txt");
+		tulis.write("jumlah Steker  : "+o.getJumlahsteker());
+		tulis.write("kondisi Steker : "+o.getKondisisteker());
+		tulis.write("posisi Steker : "+o.getPosisisteker());
+                tulis.write("jumlah LCD  : "+o.getJumlahkabellcd());
+		tulis.write("kondisi LCD : "+o.getKondisikabellcd());
+		tulis.write("posisi LCD : "+o.getPosisikabellcd());
+                tulis.write("jumlah Lampu  : "+o.getJumlahlampu());
+		tulis.write("kondisi Lampu : "+o.getKondisilampu());
+		tulis.write("posisi Lampu : "+o.getPosisilampu());
+                tulis.write("jumlah Kipasangin  : "+o.getJumlahkipasangin());
+		tulis.write("kondisi Kipasangin : "+o.getKondisikipasangin());
+		tulis.write("posisi Kipasangin : "+o.getPosisikipasangin());
+                tulis.write("jumlah AC  : "+o.getJumlahac());
+		tulis.write("kondisi AC : "+o.getKondisiac());
+		tulis.write("posisi AC : "+o.getPosisiac());
+                tulis.write("jumlah CCTV  : "+o.getJumlahcctv());
+		tulis.write("kondisi CCTV : "+o.getKondisicctv());
+		tulis.write("posisi CCTV : "+o.getPosisicctv());
+                tulis.write("jumlah jendela : "+o.getJumlahpintu());
+		tulis.write("jumlah pintu : "+o.getJumlahpintu());
+                               
+		tulis.close();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
 }
-
+void input(){
     
-
+}}

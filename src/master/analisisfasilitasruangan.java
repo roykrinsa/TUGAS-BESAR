@@ -11,6 +11,7 @@ public class analisisfasilitasruangan extends inputfasilitasruangan implements i
 }
     public void analisisfasilitasruangan(){
      masukkan();
+     save();
      Analisiskelistrikan();
         
     
