@@ -2,7 +2,7 @@
 package master;
 
 import java.util.Scanner;
-
+import java.io.FileWriter;
 public class inputkondisiruang extends KondisiRuang {
     KondisiRuang obj = new KondisiRuang();
     Scanner in = new Scanner(System.in);
@@ -71,5 +71,31 @@ public class inputkondisiruang extends KondisiRuang {
      void kokoh(){
          System.out.println("Masukkan Nilai kekokohan = ");
          obj.setKekokohan(in.nextInt());
+     }
+     public void simpan(){
+         try{
+             FileWriter fill = new FileWriter("inputkondisiruang.txt");
+             fill.write("Masukkan panjang : "+obj.getPanjang());
+             fill.write("Masukka lebar : "+obj.getLebar());
+             fill.write("Masukkan kondisi atap : "+obj.getKondisiAtap());
+             fill.write("Masukkan kondisi dinding : "+obj.getKondisiDinding());
+             fill.write("Masukkan kondisi jendela : "+obj.getKondisiJendela());
+             fill.write("Masukkan kondisi lantai : "+obj.getKondisiLantai());
+             fill.write("Masukkan kondisi pintu : "+obj.getKondisiPintu());
+             fill.write("Masukkan nilai pencahayaan : "+obj.getNilaiPencahayaan());
+             fill.write("Masukkan nilai sirkulasi udara : "+obj.getSirkulasiUdara());
+             fill.write("Masukkan suhu ruangan : "+obj.getSuhu());
+             fill.write("Masukkan nilai kelembaban : "+obj.getKelembaban());
+             fill.write("Masukkan nilai kebisingan : "+obj.getKebisingan());
+             fill.write("Masukkan nilai bau : "+obj.getBau());
+             fill.write("Masukkan nilai kerusakan : "+obj.getKerusakan());
+             fill.write("Masukkan nilai ke-ausan : "+obj.getKeausan());
+             fill.write("Masukkan nilai kekokohan : "+obj.getKekokohan());
+             fill.close();
+         }
+         catch(Exception b){
+             b.printStackTrace();
+             
+         }
      }
 }
