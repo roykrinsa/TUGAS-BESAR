@@ -10,130 +10,173 @@ package master;
  * @author Soveatin
  */
 public class analisakondisiruang extends inputkondisiruang {
+ 
     public void analisakondisiruang(){
-        analisabentukruang();
-        analisakebersihan();
-        sirkulasiudara();
-        cahaya_();
-        lembab();
-        suhu();
-        kebisingan();
-        bau_();
-        kerusakan();
-        bocorr();
-        auss();
-        kokoh();
+    inputankondisiruangan();
     bentuk();
     bersih();
     udra();
     lighting();
     lmbb();
-    suhuu();
     bisingg();
     bauuu();
     rusak();
     bocor();
     aus();
-    kokoh();
+    kkoh();
     }
-    void bentuk(){
+    @Override
+    public void in(){
+        inputankondisiruangan();
+    }
+    int bentuk(){
         if(obj.getPanjang()>obj.getLebar()){
+            
             System.out.println("Sesuai");
+            return 1;
         }
         else{
+            
             System.out.println("Tidak sesuai");
+            return 0;
         }
+        
     }
-    void bersih(){
+    int bersih(){
         double b;
+       
         b=obj.getKondisiLantai()*obj.getKondisiDinding()*obj.getKondisiAtap()*obj.getKondisiPintu()*obj.getKondisiJendela()/5;
         if(b>=75){
+             
             System.out.println("Sudah Bersih");
+            return 1;
         }
         else{
             System.out.println("Belum Bersih");
+            return 0;
         }
+        
     }
-    void udra(){
+    int udra(){
         if(obj.getSirkulasiUdara()>=75){
+            
             System.out.println("Sirkulasi Udara Lancar");
+            return 1;
         }
         else{
             System.out.println("Sirkulasi ");
+            return 0;
         }
+        
     }
-    void lighting(){
+    int lighting(){
         if(obj.getNilaiPencahayaan()>=250 && obj.getNilaiPencahayaan()<=350){
+            
             System.out.println("Sudah Sesuai");
+            return 1;
             
         }
         else{
             System.out.println("Belum Sesuai");
+            return 0;
         }
+        
     }
-    void lmbb(){
+    int lmbb(){
         if(obj.getKelembaban()>=70 && obj.getKelembaban()<=80){
+            
             System.out.println("Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Belum Sesuai");
+            return 0;
         }
+        
     }
-    void suhuu(){
+    int suhuu(){
         if(obj.getSuhu()>=25 && obj.getSuhu()<=35){
+            
             System.out.println("Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Belum Sesuai");
+            return 0;
         }
+        
     }
-    void bisingg(){
+    int bisingg(){
          if(obj.getKebisingan()<=75){
+            
             System.out.println("Tidak Bising");
+            return 1;
         }
         else{
             System.out.println("Bising");
+            return 0;
         }
+         
     }
-    void bauuu(){
+    int bauuu(){
         if(obj.getBau()<=75){
+            
             System.out.println("Ruangan Tidak Bau");
+            return 1;
         }
         else{
             System.out.println("Ruangan Bau");
+            return 0;
         }
+        
     }
-    void rusak(){
+    int rusak(){
         if(obj.getKerusakan()<=75){
+          
             System.out.println("Tidak Rusang dan Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Rusak dan Belum Sesuai");
+            return 0;
         }
+        
     }
-    void bocor(){
+    int bocor(){
          if(obj.getKebocoran()<=75){
+           
             System.out.println("Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Sudah Sesuai");
+            return 0;
         }
+         
     }
-    void aus(){
+    int aus(){
         if(obj.getKeausan()<=75){
+            
             System.out.println("Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Belum Sesuai");
+            return 0;
         }
+        
     }
-    void kokoh(){
+    int kkoh(){
         if(obj.getKekokohan()>=75){
+           
             System.out.println("Kokoh dan Sudah Sesuai");
+            return 1;
         }
         else{
             System.out.println("Rapuh dan Belum Sesuai");
+            return 0;
         }
+        
     }
     
 }

@@ -5,11 +5,13 @@
  */
 package master;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Soveatin
  */
-public class KondisiRuang {
+public class KondisiRuang implements Serializable {
    private int panjang;
    private int lebar;
    private int kondisiLantai;
