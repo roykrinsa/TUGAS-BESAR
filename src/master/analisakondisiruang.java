@@ -9,7 +9,7 @@ package master;
  *
  * @author Soveatin
  */
-public class analisakondisiruang extends inputkondisiruang {
+public class analisakondisiruang extends inputkondisiruang implements interfaceKondisi {
  
     public void analisakondisiruang(){
     inputankondisiruangan();
@@ -177,6 +177,11 @@ public class analisakondisiruang extends inputkondisiruang {
             return 0;
         }
         
+    }
+
+    @Override
+    public void intfkondRuang() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
