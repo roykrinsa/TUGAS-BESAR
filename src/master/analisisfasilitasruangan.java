@@ -4,6 +4,7 @@ package master;
 import java.util.*;
 
 public class analisisfasilitasruangan extends inputfasilitasruangan implements interfacefasilitas {
+   @Override
    public void data(){
     System.out.println("petunjuk.");
     System.out.println("angka 1=baik");
@@ -32,175 +33,115 @@ public class analisisfasilitasruangan extends inputfasilitasruangan implements i
         System.out.println("==================================================");
         
     }
-    
-    
-    
-    void Analisiskelistrikan(){ 
+    int Analisiskelistrikan(){ 
         
-        if(o.getJumlahsteker()>=4){
+        if(o.getJumlahsteker()>=4 && o.getKondisisteker()==2 && o.getPosisisteker()==1||o.getPosisisteker()==3){
             System.out.println("Sesuai");
+            return 1;
             
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
-        if (o.getKondisisteker()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getPosisisteker()==1||o.getPosisisteker()==3)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");
-}
+		}
+  
+     int Analisislcd(){
         
-    }
-    void Analisislcd(){
-        
-        if(o.getJumlahkabellcd()>=1){
+        if(o.getJumlahkabellcd()>=1 && o.getKondisikabellcd()==2 && o.getPosisikabellcd()==2 ){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
-        if (o.getKondisikabellcd()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getPosisikabellcd()==2)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");
+       
 }
        
-    }
-    void Analisislampu(){
+    
+     int Analisislampu(){
         
-        if(o.getJumlahlampu()>=18){
+        if(o.getJumlahlampu()>=18 && o.getKondisilampu()==2 && o.getPosisilampu()==2){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
-        if (o.getKondisilampu()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getPosisilampu()==2)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");
-}
     }
-    void Analisiskipasangin(){
+     int Analisiskipasangin(){
     
-        if(o.getJumlahkipasangin()>=2){
+        if(o.getJumlahkipasangin()>=2 && o.getKondisikipasangin()==2 && o.getKondisikipasangin()==2){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+			return 0;
         }
-        if (o.getKondisikipasangin()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getKondisikipasangin()==2)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");}
     }
-    void Analisisac(){
+     int Analisisac(){
     
-        if(o.getJumlahac()>=1){
+        if(o.getJumlahac()>=1 && o.getKondisiac()==2 && o.getPosisiac()==4) {
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+			return 0;
         }
-        if (o.getKondisiac()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getPosisiac()==4)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");
-}
+      
     }        
-    void Analisisinternet(){
+     int Analisisinternet(){
         
                
-        if(o.getSSID()=="umm hotspot"){
+        if(o.getSSID()=="umm hotspot" && o.getLogin()==2 ){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
-        if (o.getLogin()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        
 }
-    void Analisiscctv(){
+     int Analisiscctv(){
 
-        if(o.getJumlahcctv()==2){
+        if(o.getJumlahcctv()==2 && o.getKondisicctv()==2 && o.getPosisicctv()==1||o.getPosisicctv()==3){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
-        if (o.getKondisicctv()==2) {
-            System.out.println("sesuai");
-        }
-        else{
-            System.out.println("tidak sesuai");
-        }
-        if(o.getPosisicctv()==1||o.getPosisicctv()==3)
-        { System.out.println("sesuai");
-            }
-    else{
-            System.out.println("tidak sesuai");
-}
     }
-    void pintu(){
+     int pintu(){
     
         
                
         if(o.getJumlahpintu()>=2){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
         
         }
-    void jendela(){
+     int jendela(){
         
         
                
         if(o.getJumlahjendela()>=1){
             System.out.println("Sesuai");
+            return 1;
         }
         else{
             System.out.println("Tidak sesuai");
+            return 0;
         }
     
     }

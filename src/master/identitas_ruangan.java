@@ -1,7 +1,9 @@
 package master;
 
+import java.io.Serializable;
 
-public class identitas_ruangan {
+
+public class identitas_ruangan implements Serializable {
 
 String namaruangan;
 String lokasi_ruangan;
@@ -9,6 +11,9 @@ String program_studi;
 int kunci_pintu;
 int jendela;
 int bahaya;
+identitas_ruangan(){
+    
+}
 public String getNamaruangan() {
         return namaruangan;
     }
@@ -56,4 +61,16 @@ public String getNamaruangan() {
     public void setBahaya(int bahaya) {
         this.bahaya = bahaya;
     }
+    public void identitas(String nama_ruangan,String lokasi_ruangan,String program_studi){
+        this.namaruangan=namaruangan;
+        this.lokasi_ruangan=lokasi_ruangan;
+        this.program_studi=program_studi;
+}
+    public void secure(int kunci_pintu, int bahaya,int jendela){
+        this.kunci_pintu=kunci_pintu;
+        this.bahaya=bahaya;
+        this.jendela=jendela;
+        
+    }
+    
 }

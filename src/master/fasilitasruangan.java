@@ -1,9 +1,11 @@
 package master;
 
+import java.io.Serializable;
 
 
 
-class fasilitasruangan {
+
+class fasilitasruangan implements Serializable {
 public int jumlahkursi;
 public int jumlahpintu;
 public int jumlahjendela;

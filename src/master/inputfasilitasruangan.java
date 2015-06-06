@@ -1,14 +1,21 @@
 
 package master;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
-import java.util.Scanner;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.*;
 
 
 public abstract class inputfasilitasruangan extends fasilitasruangan  {
 
     Scanner in = new Scanner(System.in);
     public fasilitasruangan o= new fasilitasruangan();
+    String fileme ="inputfasilitasruangan.txt";
     
  public void masukkan(){ 
         System.out.println("Masukkan jumlah steker = ");
@@ -59,34 +66,77 @@ public abstract class inputfasilitasruangan extends fasilitasruangan  {
 }
 public void save(){
 		try{
-		FileWriter tulis = new FileWriter("inputfasilitasruangan.txt");
-		tulis.write("jumlah Steker  : "+o.getJumlahsteker());
-		tulis.write("kondisi Steker : "+o.getKondisisteker());
-		tulis.write("posisi Steker : "+o.getPosisisteker());
-                tulis.write("jumlah LCD  : "+o.getJumlahkabellcd());
-		tulis.write("kondisi LCD : "+o.getKondisikabellcd());
-		tulis.write("posisi LCD : "+o.getPosisikabellcd());
-                tulis.write("jumlah Lampu  : "+o.getJumlahlampu());
-		tulis.write("kondisi Lampu : "+o.getKondisilampu());
-		tulis.write("posisi Lampu : "+o.getPosisilampu());
-                tulis.write("jumlah Kipasangin  : "+o.getJumlahkipasangin());
-		tulis.write("kondisi Kipasangin : "+o.getKondisikipasangin());
-		tulis.write("posisi Kipasangin : "+o.getPosisikipasangin());
-                tulis.write("jumlah AC  : "+o.getJumlahac());
-		tulis.write("kondisi AC : "+o.getKondisiac());
-		tulis.write("posisi AC : "+o.getPosisiac());
-                tulis.write("jumlah CCTV  : "+o.getJumlahcctv());
-		tulis.write("kondisi CCTV : "+o.getKondisicctv());
-		tulis.write("posisi CCTV : "+o.getPosisicctv());
-                tulis.write("jumlah jendela : "+o.getJumlahpintu());
-		tulis.write("jumlah pintu : "+o.getJumlahpintu());
+		ObjectOutputStream tulis = new ObjectOutputStream(new FileOutputStream(fileme));
+		tulis.writeObject("jumlah Steker  : "+o.getJumlahsteker());
+		tulis.writeObject("kondisi Steker : "+o.getKondisisteker());
+		tulis.writeObject("posisi Steker : "+o.getPosisisteker());
+                tulis.writeObject("jumlah LCD  : "+o.getJumlahkabellcd());
+		tulis.writeObject("kondisi LCD : "+o.getKondisikabellcd());
+		tulis.writeObject("posisi LCD : "+o.getPosisikabellcd());
+                tulis.writeObject("jumlah Lampu  : "+o.getJumlahlampu());
+		tulis.writeObject("kondisi Lampu : "+o.getKondisilampu());
+		tulis.writeObject("posisi Lampu : "+o.getPosisilampu());
+                tulis.writeObject("jumlah Kipasangin  : "+o.getJumlahkipasangin());
+		tulis.writeObject("kondisi Kipasangin : "+o.getKondisikipasangin());
+		tulis.writeObject("posisi Kipasangin : "+o.getPosisikipasangin());
+                tulis.writeObject("jumlah AC  : "+o.getJumlahac());
+		tulis.writeObject("kondisi AC : "+o.getKondisiac());
+		tulis.writeObject("posisi AC : "+o.getPosisiac());
+                tulis.writeObject("jumlah CCTV  : "+o.getJumlahcctv());
+		tulis.writeObject("kondisi CCTV : "+o.getKondisicctv());
+		tulis.writeObject("posisi CCTV : "+o.getPosisicctv());
+                tulis.writeObject("jumlah jendela : "+o.getJumlahpintu());
+		tulis.writeObject("jumlah pintu : "+o.getJumlahpintu());
                                
 		tulis.close();
+		}
+		catch(FileNotFoundException e){
+			e.printStackTrace();
 		}
 		catch(Exception e){
 			e.printStackTrace();
 		}
 }
+  public void readme(){
+         try {
+	ObjectInputStream os = new ObjectInputStream(new FileInputStream(fileme));
+	 os.readObject();
+        System.out.println("Masukkan jumlah steker = "+o.getJumlahsteker());
+        System.out.println("Masukkan kondisi steker = "+o.getKondisisteker());
+        System.out.println("Masukkan posisi steker = "+o.getPosisisteker());
+        System.out.println("Masukkan jumlah kabel LCD = "+o.getJumlahkabellcd());
+        System.out.println("Masukkan kondisi kabel LCD = "+o.getKondisikabellcd());
+        System.out.println("Masukkan posisi kabel LCD = "+o.getPosisikabellcd());
+        System.out.println("Masukkan jumlah lampu = "+o.getJumlahlampu());
+        System.out.println("Masukkan kondisi lampu = "+o.getKondisilampu());
+        System.out.println("Masukkan posisi lampu = "+o.getPosisilampu());
+        System.out.println("Masukkan jumlah kipas angin = "+o.getJumlahkipasangin());
+        System.out.println("Masukkan kondisi kipas angin = "+o.getKondisikipasangin());
+        System.out.println("Masukkan posisi kipas angin = "+o.getPosisikipasangin());
+        System.out.println("Masukkan jumlah AC = "+o.getJumlahac());
+        System.out.println("Masukkan kondisi AC = "+o.getKondisiac());
+        System.out.println("Masukkan posisi AC = "+o.getPosisiac());
+        System.out.println("Masukkan SSID = "+o.getSSID());
+        System.out.println("dapat login = "+o.getLogin());
+        System.out.println("Masukkan jumlah CCTV = "+o.getJumlahcctv());
+        System.out.println("Masukkan kondisi CCTV = "+o.getKondisicctv());
+        System.out.println("Masukkan posisi CCTV = "+o.getPosisicctv());
+        System.out.println("Masukkan jumlah pintu = "+o.getJumlahpintu());
+        System.out.println("Masukkan jumlah jendela = "+o.getJumlahjendela());
+ 
+        
+       
+			os.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+  }
 void input(){
     
-}}
+}
+}
+
