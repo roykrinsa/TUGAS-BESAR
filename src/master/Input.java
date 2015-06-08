@@ -85,6 +85,7 @@ public class Input extends identitas_ruangan {
           catch(ClassNotFoundException e){
               e.printStackTrace();
           }
+          
       }
 }
 
