@@ -844,8 +844,24 @@ fasilitas.setJumlahkursi(Integer.parseInt(jmlk.getText()));
 fasilitas.setSSID(ssid.getText());
 fasilitas.setLogin(Integer.parseInt(dl.getSelectedItem().toString()));
 
+fasilitas.Analisiskelistrikan();
+fasilitas.Analisislcd();
+fasilitas.Analisislampu();
+fasilitas.Analisiskipasangin();
+fasilitas.Analisisac();
+fasilitas.Analisisinternet();
+fasilitas.Analisiscctv();
+fasilitas.pintu();
+fasilitas.jendela();
+
 fasilitas.save();
 fasilitas.readme();
+
+       
+
+       
+    
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jmlkaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmlkaActionPerformed

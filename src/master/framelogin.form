@@ -794,37 +794,30 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="dl" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlj" min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="kc" min="-2" max="-2" attributes="0"/>
-                                      <Component id="pc" min="-2" max="-2" attributes="0"/>
-                                      <Component id="pac" min="-2" max="-2" attributes="0"/>
-                                      <Component id="kac" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jmlac" min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="jmlc" min="-2" pref="28" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="ssid" min="-2" pref="86" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                              </Group>
-                              <Component id="pka" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="kka" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="dl" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlj" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="kc" min="-2" max="-2" attributes="0"/>
+                              <Component id="pc" min="-2" max="-2" attributes="0"/>
+                              <Component id="pac" min="-2" max="-2" attributes="0"/>
+                              <Component id="kac" min="-2" max="-2" attributes="0"/>
+                              <Component id="jmlac" min="-2" pref="28" max="-2" attributes="0"/>
+                              <Component id="jmlc" min="-2" pref="28" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="ssid" min="-2" pref="86" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="jmlka" min="-2" pref="28" max="-2" attributes="0"/>
-                          <EmptySpace min="59" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="pka" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="kka" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jmlka" alignment="0" min="-2" pref="28" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="32767" attributes="0"/>
